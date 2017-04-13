@@ -1,0 +1,202 @@
+@import "../mixins";
+@bili:75rem;
+.wb-bytb-allove{
+  .module-wrap {
+  	.bigger {
+	  display: block;
+	  z-index: 3;
+	  -webkit-transition: all 1s ease;
+	  -webkit-transform: translateZ(-1px) scale(1);
+	  opacity: 0.8;
+	  background: url('https://gw.alicdn.com/tps/TB1lZaKLVXXXXbcXXXXXXXXXXXX-525-459.png') no-repeat center top;
+	  background-size: 100%;
+
+	}
+	.love_out{
+		opacity: 0;
+	}
+	/*点击时类似咻一咻的动画效果*/
+	.biggest {
+	  -webkit-transform: translateZ(-1px) scale(1.9);
+	  opacity: 0;
+	  z-index: 3 !important;
+	  pointer-events: none;
+	}
+  	.clear{ zoom:1;}
+	.clear:after{ content:'.'; display:block; clear:both; height:0; visibility:hidden;}
+	img{ display:block; width:100%;}
+	a{text-decoration:none; outline:none;}
+	a:hover{ text-decoration:none;}
+	.al_page{
+		position:relative;
+		width: 750/@bili;
+		background: url('https://gw.alicdn.com/tps/TB1iJCSLVXXXXaTXFXXXXXXXXXX-750-1334.jpg_q90') no-repeat bottom center;
+		height: 100%;
+		position: fixed;
+		background-size: 100%;
+		.by_bottom{
+		}
+		/*爱心填满后，下落小爱心*/
+		.by_heat{
+			-webkit-animation: animate-heat 4s linear infinite;
+			position: absolute;
+			top:0;
+			left: 0;
+			width:100%;
+			z-index: 4;
+			display: none;
+		}
+		.by_heat1{
+			-webkit-animation: animate-heat 5s linear infinite;
+			position: absolute;
+			top:0;
+			left: 0;
+			width:100%;
+			z-index: 4;
+			display: none;
+		}
+		@-webkit-keyframes animate-heat
+		{
+		    0% { -webkit-transform:translateY(-600px);opacity:1;}
+		    50% {-webkit-transform:translateY(-300px);opacity:0.8;}
+		    100% { -webkit-transform:translateY(0);opacity:0;}
+		}
+
+		/*最后文字的盖章动画*/
+		@-webkit-keyframes gaizhang {
+		    0% {bottom: 9.16rem;-webkit-transform: scale(3);opacity:0;}
+		    100%{bottom:3.16rem;-webkit-transform: scale(1);opacity:1;}
+		}
+
+		
+		.gaizhang{
+		    -webkit-animation-name:gaizhang;
+		    animation-name: gaizhang;
+		    -webkit-animation-duration: 3s;
+		}
+		/*爱心填满后的缩放动画*/
+		@-webkit-keyframes heat{
+			0% {-webkit-transform: scale(1.5)};
+			100%{-webkit-transform: scale(1);}	
+		}
+		.heat{
+			-webkit-animation:heat 1.5s linear;
+		}
+		.by_font1,.by_font2,.by_font3{
+			position: absolute;	
+			left: 50%;		
+			z-index: 2;
+		}
+		.by_font1{
+			width: 568/@bili;
+			margin-left: -284/@bili;
+			bottom: 347/@bili;
+		}
+		.by_font2{
+			width: 315/@bili;
+			margin-left: -157/@bili;
+			bottom: 237/@bili;
+			display: none;
+		}
+		.by_font3{
+			width: 271/@bili;
+			margin-left: -135/@bili;
+			bottom: 237/@bili;
+			/*bottom: 9.16rem;*/
+			display: none;
+		}
+		.by_love,.love_out,.by_bgcolor,.bigger{
+			position: absolute;
+			bottom: 500/@bili;
+			left: 50%;
+			margin-left: -262/@bili;
+			width: 525/@bili;
+			height: 459/@bili;
+		}
+		.by_love{
+			z-index: 1;
+			background: url('https://gw.alicdn.com/tps/TB15PuULVXXXXXcXXXXXXXXXXXX-525-459.png') no-repeat center top;
+			background-size: 100%;
+		}
+		.love_out{
+			z-index: 5;
+			/*width: 600/@bili;
+			height: 500/@bili;
+			margin-left: -300/@bili;*/
+		}
+		/*页面进入手指的点击动画*/
+		@-webkit-keyframes shou
+		{
+		    0% { -webkit-transform: scale(1.2)}
+		    100% { -webkit-transform: scale(1)}
+		}
+		.by_shou{
+			-webkit-animation:shou 1s linear infinite;
+			position: absolute;
+			bottom: 400/@bili;
+			left: 50%;
+			margin-left: -148/@bili;
+			width: 297/@bili;
+			z-index: 4;
+		}
+		.by_text{
+			font-size: 72/@bili;
+			color: #fff5c8;
+			/*text-shadow: red 2px 0 0;*/
+			font-weight: bold;
+			position: absolute;
+			left:4rem;
+			bottom: 9rem; 
+			z-index: 4;
+			text-shadow: -2px -2px rgba(255, 58, 63,0.8);
+		}
+		/*水波的移动*/
+		@-webkit-keyframes bymove{
+	         0%{left: 40%;}
+	         25%{left: 50%;}
+	         50%{left:60%;}
+	         75%{left: 50%;}
+	         100%{left:40%;}
+	    } 
+		.bagin_img{
+			position: absolute;
+			z-index: 2;
+			/*bottom: 5/@bili;*/
+			bottom: 5.8rem;
+			left: 50%;
+			margin-left: -470/@bili;
+			width: 945/@bili;
+			height: 700/@bili;
+		}
+		.by_bgcolor{
+			z-index: 0;
+			width: 382/@bili;
+			height: 333/@bili;
+			margin-left: -191/@bili;
+			bottom: 559/@bili;
+			overflow: hidden;
+			/*position: fixed;*/
+			.by_lang{
+				width: 525/@bili;
+				height: 459/@bili;
+				z-index:0;
+				position: absolute;
+				left: 50%;
+				margin-left: -4rem;
+				bottom:-1.4rem;
+				-webkit-animation: bymove 4s linear infinite;
+			}
+			.bgcolor_s{
+				/*background: red;*/
+				position: absolute;
+				width: 382/@bili;
+				/*bottom: -100%;*/
+				bottom: -4.2rem;
+				background: url('https://gw.alicdn.com/tps/TB1SOiJLVXXXXajXFXXXXXXXXXX-382-341.jpg') no-repeat center bottom;
+				background-size: 100%;
+				height: 341/@bili;
+			}
+		}
+	}
+  }
+}
